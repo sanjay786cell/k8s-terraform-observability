@@ -1,25 +1,3 @@
-# Kubernetes Cluster with Terraform, Prometheus, Grafana, and DaemonSet Logging (Local, Zero-Cost)
-
-## Overview
-
-This repository provisions a **local Kubernetes cluster** using **Minikube** and **Terraform**, and sets up:
-
-- **Prometheus + Grafana** for monitoring
-- **NetworkPolicies** for basic traffic control
-- A **DaemonSet** that runs on **every node** to siAbsolutely — here is a **premium, beautifully formatted, professionally enhanced GitHub README** with:
-
-✔ Badges
-✔ Architecture diagram
-✔ Highlights section
-✔ Screenshots placeholders
-✔ Commands
-✔ Features
-✔ Clean formatting
-✔ Recruiter-friendly overview
-
-Use this as your **final README.md**.
-
----
 
 # 🌟 Enhanced, Professional GitHub README (Copy/Paste into README.md)
 
@@ -205,112 +183,19 @@ password: ChangeMe123!
 
 ---
 
-# 🔐 Security – Vulnerability Scanning
-
-Scan any image:
-
-```powershell
-bash scripts/scan_image_trivy.sh nginx:latest
-```
-
 Produces a report of HIGH + CRITICAL CVEs.
 
 ---
 
-# 🔥 Screenshots to Include (Submission Checklist)
+<img width="1920" height="985" alt="image" src="https://github.com/user-attachments/assets/835e7f4c-a5d2-4f85-956e-9d7764c8e44b" />
 
-Include these **7 screenshots**:
+<img width="1897" height="997" alt="image" src="https://github.com/user-attachments/assets/a65869a5-06c1-4822-8733-a123109ef830" />
 
-1️⃣ Grafana home page
-2️⃣ Node Exporter dashboard
-3️⃣ Prometheus targets page
-4️⃣ `kubectl get pods -A` showing monitoring stack + DaemonSet
-5️⃣ NetworkPolicies list
-6️⃣ Trivy vulnerability scan output
-7️⃣ Terraform apply successful
+<img width="1920" height="981" alt="image" src="https://github.com/user-attachments/assets/43c95a45-6d14-4f75-9fe3-d0fa7927f4c1" />
 
-These will impress interviewers instantly.
+<img width="1214" height="612" alt="image" src="https://github.com/user-attachments/assets/dfee79ad-7fb8-4770-a3b7-6ae42a58ba01" />
 
----
+<img width="799" height="222" alt="image" src="https://github.com/user-attachments/assets/7dc32343-aff1-4c29-bb9f-13f092e8d15c" />
 
-# 🧹 Cleanup
 
-```powershell
-terraform destroy -auto-approve
-minikube stop
-minikube delete
-```
 
----
-
-# 🏁 Conclusion
-
-This project demonstrates real-world DevOps skills:
-
-* IaC (Terraform)
-* Kubernetes (Minikube)
-* Monitoring (Prometheus/Grafana)
-* Security (RBAC, NetworkPolicies, Trivy)
-* Container workloads (DaemonSets)
-* Windows-compatible infrastructure automation
-
-It is suitable for:
-
-* DevOps Engineer portfolios
-* SRE job submissions
-* Cloud Engineer interviews
-* Infrastructure automation practice
-
----
-
-# 🎉 Want Resume Bullet Points Too?
-
-Just tell me:
-
-👉 **“Generate resume points”**
-
-I’ll create strong ATS-optimized points for your CV.
-mulate node-level logging/metrics
-- **Security best practices**:
-  - Vulnerability scanning with **Trivy**
-  - RBAC and least privilege
-  - Example of secure secret handling with Kubernetes Secrets
-
-Everything runs **locally** on your machine – **no cloud provider or costs involved.**
-
----
-
-## Architecture
-
-- **Minikube**: Local Kubernetes cluster
-- **Terraform**:
-  - `modules/cluster`: starts Minikube via script
-  - `modules/network`: creates namespaces + NetworkPolicies
-  - `modules/monitoring`: installs kube-prometheus-stack (Prometheus + Grafana)
-- **DaemonSet**:
-  - Runs on every node (`busybox` container printing fake CPU usage)
-  - Uses RBAC with least-privilege access
-- **Trivy**:
-  - Scans container images for HIGH/CRITICAL vulnerabilities
-
----
-
-## Prerequisites
-
-- Linux (tested on Ubuntu) or similar environment
-- [Minikube](https://minikube.sigs.k8s.io/docs/start/)
-- `kubectl`
-- [Terraform](https://developer.hashicorp.com/terraform/downloads) >= 1.5
-- [Trivy](https://aquasecurity.github.io/trivy/v0.18.3/)
-
-Make sure Docker or another supported Minikube driver is installed.
-
----
-
-## Getting Started
-
-### 1. Clone the Repo
-
-```bash
-git clone <your-github-url>/k8s-terraform-observability.git
-cd k8s-terraform-observability
