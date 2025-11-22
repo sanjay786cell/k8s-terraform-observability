@@ -1,0 +1,6 @@
+# Copy this file to terraform.tfvars and adjust if needed
+
+environment             = "dev"
+kubeconfig_path         = "~/.kube/config"
+enable_network_policies = true
+enable_monitoring       = true

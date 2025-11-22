@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: node-logger
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: node-logger
+  template:
+    metadata:
+      labels:
+        app: node-logger
+    spec:
+      serviceAccountName: node-logger-sa
+      containers:
+        - name: logger
+          image: busybox:latest
+          imagePullPolicy: IfNotPresent
+          command: ["/bin/sh", "-c"]
+          args:
+            - |
+              while true; do
+                echo "Node $(hostname) - $(date) - fake CPU usage: $((RANDOM % 100))%" ;
+                sleep 5;
+              done
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "32Mi"
+            limits:
+              cpu: "100m"
+              memory: "64Mi"
